@@ -22,7 +22,7 @@ if (isset($_GET['source'])) {
         <?php
         if (isset($_POST['ip'])) {
             $ip = $_POST['ip'];
-            echo system("ping -c 3 ${ip}");
+            echo system("ping -c 1 ${ip}");
         }
 
         ?>

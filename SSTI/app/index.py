@@ -1,5 +1,4 @@
 from flask import Flask, request, render_template, render_template_string
-import random
 
 app = Flask(__name__)
 
@@ -12,15 +11,15 @@ def index():
     if request.method == "GET":
         return render_template('index.html')
     else:
-        name = request.name
-        num = int(request.number)
+        name = request.form.get('username')
+        num = int(request.form.get('number'))
         if num < 0 or num > 4:
-            return render_template('index.html', "Invalid number!(0~4)")
+            return "Invalid number!(0~4)"
         fruits = ['🍎', '🍓', '🍌', '🍈', '🍋']
         fruit = fruits[num]
         template = '''
             <p>Your number: {}</p>
-            <h1>Today's your lucky fruit is:</h1>
+            <h1>Today's your lucky fruit is: {}</h1>
             
             <b>Have a nice day, {}!</b>
         
