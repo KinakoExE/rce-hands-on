@@ -1,0 +1,14 @@
+version: '3'
+services:
+  system_function:
+    build:
+      context: ./system-function
+      dockerfile: Dockerfile
+    ports:
+      - "1111:80"
+  ssti:
+    build:
+      context: ./SSTI
+      dockerfile: Dockerfile
+    ports:
+      - "2222:5000"
