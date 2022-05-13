@@ -12,3 +12,13 @@ services:
       dockerfile: Dockerfile
     ports:
       - "2222:5000"
+  file_upload:
+    build:
+      context: ./file-upload
+      dockerfile: Dockerfile
+    volumes:
+      - type: bind
+        source: ./file-upload/app
+        target: /var/www/html
+    ports:
+      - "3333:80"
