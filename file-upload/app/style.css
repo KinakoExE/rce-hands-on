@@ -1,0 +1,38 @@
+input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+textarea {
+    width: 80%;
+    height: 70%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+button {
+    background-color: #4CAF50;
+    border: 2px solid #CCCCCC;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: white;
+    color: #4CAF50;
+}
