@@ -1,7 +1,7 @@
 document.getElementById('form').addEventListener('submit', e => {
 	e.preventDefault();
 
-	fetch('/api/user', {
+	fetch('/api/admin/user', {
 		method: 'POST',
 		body: JSON.stringify({
 			'user.username': document.querySelector('input[type=text]').value
