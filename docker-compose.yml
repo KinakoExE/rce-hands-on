@@ -22,3 +22,16 @@ services:
         target: /var/www/html
     ports:
       - "3333:80"
+  deserializatoin:
+    build:
+      context: ./deserialization
+      dockerfile: Dockerfile
+    ports:
+      - "4444:4444"
+  # bonus:
+  #   build:
+  #     context: ./bonus-challenge
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "5555:80"
+
