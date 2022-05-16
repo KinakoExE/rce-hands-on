@@ -19,18 +19,18 @@ router.post('/auth',(req, res) => {
               });
         } 
         // Double check!
-        else if (username.toLowerCase() === "jack") {
-            if (username.toUpperCase() !== "JACK") {
+        else if (username.toLowerCase() === "kinako") {
+            if (username.toUpperCase() !== "KINAKO") {
                 req.session.regenerate((err) => {
                     req.session.username = "admin";
                     res.redirect('/admin')
                     });
             } else {
-                res.send("Don't impersonate yourself, you're not jack I know🤣🤣🤣")
+                res.send("Don't impersonate yourself, you're not kinako, I know🤣🤣🤣")
                 res.end();
             }
         } else {
-            res.send("User not found, maybe guest?")
+            res.send("User not found, you can log in as guest instead!")
             res.end();
         }
     } else {
@@ -52,8 +52,13 @@ router.post('/api/admin/user', (req, res) => {
         const {user} = unflatten(req.body);
 
         if (user.username !== "") {
+            var emojis = ["🤣", "😀", "😅", "😁", "😂"]
+            var messages = ["have a nice day!", "take care of yourself!", "smile is the best medicine!", "I miss you!"]
+            var emoji = emojis[Math.floor(Math.random() * emojis.length)]
+            var message = messages[Math.floor(Math.random() * messages.length)]
+
             return res.json({
-                'response': pug.compile('Hello #{username}, enjoy this app#{emoji}')({username: user.username, emoji: "😀"})
+                'response': pug.compile('Hello #{username}, #{message}#{emoji}')({username: user.username, message: message, emoji: emoji})
             })
         } else {
             return res.json({
