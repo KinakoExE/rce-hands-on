@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('../partials/head'); %>
+        <link rel="stylesheet" type="text/css" href="login.css" >
+    </head>
+    <body class="container">
+        <header>
+            <%- include('../partials/header'); %>
+        </header>
+        <main>
+            <div class="alert alert-warning" role="alert">
+                To Serious.inc employees: our login system has been now broken because ex-developer messed up source code on github before his left...
+              </div>
+            <!-- <form action="/login" method="post"> -->
+            <form action="#">
+                <div class="form-container">
+                    <label for="username"><b>Username</b></label>
+                    <input type="text" placeholder="Username" name="username" required>
+        
+                    <label for="password"></label><b>Password</b></label>
+                    <input type="password" placeholder="Password" name="password" required>
+        
+                    <button type="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember">Remember me
+                    </label>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
