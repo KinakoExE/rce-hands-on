@@ -13,4 +13,4 @@ docker-compose up
 - file-upload→easy
 - deserialization→medium
 - bonus-challenge→hard
-  - let me know if you solve deserialization and bonus challenge via Slack DM!
+  - let me know via Slack DM if you solve deserialization and bonus challenge!
